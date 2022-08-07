@@ -19,7 +19,7 @@ btn.addEventListener("click", function () {
     })
 })
 name.onblur = function () {
-    let reg = /\w+\D+/ig;
+    let reg = /^[a-zA-Z\s]+$/ig;
     if (name.value == "") {
         document.querySelector(".name").innerHTML = "*Please Enter Your Name";
         name.style.cssText = "border-color:red";
@@ -47,7 +47,7 @@ age.onblur = function () {
     }
 }
 email.onblur = function () {
-    let reg = /\w+@\w+.\w+.?\w+?.?\w+?/ig;
+    let reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/ig;
     if (email.value == "") {
         document.querySelector(".email").innerHTML = "*Please Enter Your email";
         email.style.cssText = "border-color:red";
@@ -62,7 +62,7 @@ email.onblur = function () {
     }
 }
 number.onblur = function () {
-    let reg = /\d{11}/ig;
+    let reg = /01[0125]\d{8}/ig;
     if (number.value == "") {
         document.querySelector(".number").innerHTML = "*Please Enter Your Number";
         number.style.cssText = "border-color:red";
